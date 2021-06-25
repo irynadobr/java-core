@@ -15,8 +15,6 @@ public class Main {
         cinderellas.add(new Cinderella(6, "Anna", 37));
         cinderellas.add(new Cinderella(7, "Natalie", 35));
 
-        for (Cinderella cinderella : cinderellas) {
-            prince.Cinderella(cinderella.getSize(),cinderella.getName());
-        }
+       prince.Cinderella(cinderellas);
     }
 }

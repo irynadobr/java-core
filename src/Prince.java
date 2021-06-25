@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Prince {
@@ -61,10 +63,11 @@ public class Prince {
                 '}';
     }
 
-    public void Cinderella (int sizeCinderella, String nameCinderella) {
-        if (sizeCinderella == foundedShoe) {
-          System.out.println(nameCinderella + " - попелюшка, яка загубила туфельку");
+    public void Cinderella (ArrayList<Cinderella> cinderellas) {
+        for (Cinderella cinderella : cinderellas) {
+            if (cinderella.getSize() == foundedShoe) {
+                System.out.println(cinderella.getName() + " - попелюшка, яка загубила туфельку");
+            }
         }
     }
-
 }
