@@ -6,6 +6,9 @@ public class Prince {
     private String name;
     private int foundedShoe;
 
+    public Prince() {
+    }
+
     public Prince(int id, String name, int foundedShoe) {
         this.id = id;
         this.name = name;
@@ -57,4 +60,11 @@ public class Prince {
                 ", foundedShoe=" + foundedShoe +
                 '}';
     }
+
+    public void Cinderella (int sizeCinderella, String nameCinderella) {
+        if (sizeCinderella == foundedShoe) {
+          System.out.println(nameCinderella + " - попелюшка, яка загубила туфельку");
+        }
+    }
+
 }

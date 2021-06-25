@@ -5,6 +5,9 @@ public class Cinderella {
     private String name;
     private int size;
 
+    public Cinderella() {
+    }
+
     public Cinderella(int id, String name, int size) {
         this.id = id;
         this.name = name;

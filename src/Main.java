@@ -16,9 +16,7 @@ public class Main {
         cinderellas.add(new Cinderella(7, "Natalie", 35));
 
         for (Cinderella cinderella : cinderellas) {
-            if (cinderella.getSize() == prince.getFoundedShoe()) {
-                System.out.println(cinderella.getName() + " - попелюшка, яка загубила туфельку");
-            }
+            prince.Cinderella(cinderella.getSize(),cinderella.getName());
         }
     }
 }
