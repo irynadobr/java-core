@@ -40,6 +40,6 @@ public class Drum implements Tool {
 
     @Override
     public void play() {
-        System.out.println("playing instrument " + getClass().getName() + "  with  " + "size: " + this.getSize());
+        System.out.println("playing instrument " + this.getClass().getName() + "  with  " + "size: " + this.size);
     }
 }

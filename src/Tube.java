@@ -33,6 +33,6 @@ public class Tube implements Tool {
 
     @Override
     public void play() {
-        System.out.println("playing instrument " + getClass().getName() + "  with  " + "diameter: " + this.getDiameter());
+        System.out.println("playing instrument " + this.getClass().getName() + "  with  " + "diameter: " + this.diameter);
     }
 }

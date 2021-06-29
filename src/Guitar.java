@@ -41,6 +41,6 @@ public class Guitar implements Tool {
 
     @Override
     public void play() {
-        System.out.println("playing instrument " + getClass().getName() + "  with  " + "number of strings: " + this.getNumberOfStrings());
+        System.out.println("playing instrument " + this.getClass().getName() + "  with  " + "number of strings: " + this.numberOfStrings);
     }
 }
