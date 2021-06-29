@@ -62,14 +62,12 @@ public class Book implements Printable {
     }
 
     static void printBooks(Printable[] printable) {
-        ArrayList<Printable> books = new ArrayList<>();
+        System.out.println("names books: ");
         for (Printable printables : printable) {
             if (printables instanceof Book) {
-                books.add(printables);
+                System.out.println(((Book) printables).nameBook);
             }
         }
-
-        System.out.println(books);
     }
 
     @Override

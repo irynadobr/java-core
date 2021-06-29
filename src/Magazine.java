@@ -53,13 +53,12 @@ public class Magazine implements Printable {
 
 
     static void printMagazines(Printable[] printable) {
-        ArrayList<Printable> magazines = new ArrayList<>();
+        System.out.println("names mgazines: ");
         for (Printable printables : printable) {
             if (printables instanceof Magazine) {
-                magazines.add(printables);
+                System.out.println(((Magazine) printables).nameMagazine);
             }
         }
-        System.out.println(magazines);
     }
 
     @Override

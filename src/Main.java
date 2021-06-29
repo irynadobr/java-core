@@ -13,7 +13,6 @@ public class Main {
         for (Printable printables : printable) {
             printables.print();
         }
-
         Magazine.printMagazines(printable);
         Book.printBooks(printable);
     }
