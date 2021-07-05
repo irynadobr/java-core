@@ -22,7 +22,8 @@ public class Main {
                     break;
                 case 2:
                     //додати тваринку до учасника клубу по  person:
-                    zooclub.addPetPerson();
+                   // zooclub.addPetPerson();
+
                     //додати тваринку до учасника клубу по id person:
                     zooclub.addPetPersonId();
                     break;

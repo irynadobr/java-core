@@ -86,13 +86,17 @@ public class Zooclub {
 
     //    2) додати тваринку до учасника клубу по id учасника-person
     public void addPetPersonId() {
+        System.out.println("Учасники клубу: ");
+        for (Person persons : club.keySet()) {
+            System.out.println(persons);
+        }
         int idPerson = scannerInt("Enter id Person: ");
-        System.out.println("Введіть дані тваринки, яку необхідно додати до учасника з id: " + idPerson + ": ");
-        Pet newPet = pet();
         List<Person> personClub = new ArrayList<>();
         Set<Map.Entry<Person, List<Pet>>> entries = club.entrySet();
         for (Map.Entry<Person, List<Pet>> entry : entries) {
             if (idPerson == entry.getKey().getId()) {
+                System.out.println("Введіть дані тваринки, яку необхідно додати до учасника з id: " + idPerson + ": ");
+                Pet newPet = pet();
                 personClub.add(entry.getKey());
                 for (Pet pet : entry.getValue()) {
                     if (newPet.getId() == pet.getId()) {
@@ -113,28 +117,28 @@ public class Zooclub {
     }
 
     //2) додати тваринку до учасника клубу
-    public void addPetPerson() {
-        Person personClub = person();
-        if (!club.containsKey(personClub)) {
-            System.out.println("Такий person -  не є учасником клубу");
-            return;
-        }
-        Pet newPet = pet();
-        Set<Map.Entry<Person, List<Pet>>> entries = club.entrySet();
-        for (Map.Entry<Person, List<Pet>> entry : entries) {
-            if (entry.getKey().equals(personClub)) {
-                for (Pet pet : entry.getValue()) {
-                    if (newPet.getId() == pet.getId()) {
-                        System.out.println("Pet з id - " + newPet.getId() + " вже існує");
-                        return;
-                    }
-                }
-                club.get(personClub).add(newPet);
-                System.out.println("До власника " + personClub + " додано тваринку " + ": " + newPet);
-                printZooClub(club);
-            }
-        }
-    }
+//    public void addPetPerson() {
+//        Person personClub = person();
+//        if (!club.containsKey(personClub)) {
+//            System.out.println("Такий person -  не є учасником клубу");
+//            return;
+//        }
+//        Pet newPet = pet();
+//        Set<Map.Entry<Person, List<Pet>>> entries = club.entrySet();
+//        for (Map.Entry<Person, List<Pet>> entry : entries) {
+//            if (entry.getKey().equals(personClub)) {
+//                for (Pet pet : entry.getValue()) {
+//                    if (newPet.getId() == pet.getId()) {
+//                        System.out.println("Pet з id - " + newPet.getId() + " вже існує");
+//                        return;
+//                    }
+//                }
+//                club.get(personClub).add(newPet);
+//                System.out.println("До власника " + personClub + " додано тваринку " + ": " + newPet);
+//                printZooClub(club);
+//            }
+//        }
+//    }
 
     //3) видалити тваринку з власника
     public void removePetWithPerson() {
