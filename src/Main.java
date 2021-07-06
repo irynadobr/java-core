@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -58,7 +59,7 @@ public class Main {
 //        Знайти всі комп'ютери які мають жорсткий ссд диск більше 500гб та процессор і7 посортувати за ціною
         computers.stream()
                 .filter(computer -> computer.getHard().getType().equals(TypeHard.SSD) && computer.getHard().getVolume() > 500 && computer.getProcessor().getType().equals("Intel Core i7"))
-                .sorted((o1, o2) -> o1.getPrice() - o2.getPrice())
+                .sorted(Comparator.comparingInt(Computer::getPrice))
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
     }
